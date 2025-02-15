@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-	// animateText();
+	
 	toggleMenu();
 	accordionFunction();
 	handlePopup();
@@ -9,11 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 updateCountdown(tournamentDate);
 });
-const log = () =>{
-	
-	// let tournamentDate = document.querySelector(".date");
-	console.log(tournamentDate);
-}
+
 
 
 setTimeout(function () {
@@ -25,13 +21,7 @@ setTimeout(function () {
 		offset: aosOffset
 	});
 }, 100);
-// const animateText = () =>{	const aboutText = document.querySelectorAll('.about__content p, .footer nav li, .footer__block, .area__content li, .area__content p, .discover__content h2, .discover__content p, .discover__content li, .discover__content h3 ');
 
-	
-// 	aboutText.forEach((text) => {
-// 		text.setAttribute('data-aos', 'fade-up');
-// 	})
-// }
 
 const prettyScroll = () => {
 	document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -157,24 +147,4 @@ const accordionFunction = () => {
   });
 };
 
-const handlePopup = () => {
-	const openPopup = () => {
-			document.querySelectorAll('[data-open="open"]').forEach(element => {
-					element.addEventListener('click', () => {
-							document.documentElement.classList.add('open-popup');
-					});
-			});
-	};
-
-	const closePopup = () => {
-			document.querySelectorAll('[data-close="close"]').forEach(element => {
-					element.addEventListener('click', () => {
-							document.documentElement.classList.remove('open-popup');
-					});
-			});
-	};
-
-	openPopup();
-	closePopup();
-};
 
