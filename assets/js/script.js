@@ -3,14 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	toggleMenu();
 	accordionFunction();
-	handlePopup();
 	prettyScroll();
 	animationHeader();
 	
 updateCountdown(tournamentDate);
 });
-
-
 
 setTimeout(function () {
 	let aosOffset = 120;
@@ -107,6 +104,7 @@ function updateCountdown(targetDate) {
 	
 }
 let tournamentDate = new Date(document.querySelector(".date").textContent.trim()).getTime();
+
 
 
 
