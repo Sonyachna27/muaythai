@@ -1,0 +1,164 @@
+.tournament{
+	background-color: $--silver;
+	background-image: url(../images/bg-img.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 70px 0;
+	@media screen and (min-width:768px) {
+		padding: 140px 0;
+	}
+	&__container{
+		display: flex;
+		flex-direction: column;
+		@media screen and (min-width:1024px) {
+			flex-direction: row;
+
+		}
+		
+	}
+	&__content{
+		padding: 20px;
+		background-color: $--primary;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media screen and (min-width:768px) {
+			padding: 40px;
+		}
+@media screen and (min-width:1024px){
+	width:50%;
+}
+		span{
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			margin-bottom: 5px;
+			@media  screen and (min-width:768px) {
+				font-size: 20px;
+			}
+		}
+		h2{
+			@include titleH2;
+			margin-bottom: 10px;
+		}
+		&__date{
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			svg{
+				width: 24px;
+				height: 24px;
+			}
+			.date{
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 150%;
+				margin-bottom: 0;
+			}
+		}
+		p{
+			font-style: normal;
+			line-height: 140%;
+			margin-bottom: 20px;
+			&:has(+ .btn){
+				margin-bottom: 30px;
+			}
+		}
+		ul{
+			display: flex;
+			flex-direction: column;
+			padding: 12px 0;
+			border-top: 1px solid $--black;
+			border-bottom: 1px solid $--black;
+			margin-bottom: 30px;
+			li{
+				padding-left: 25px;
+				position: relative;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 140%;
+				&:before{
+					content: '';
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: url('../images/arrow-list.svg') center center / cover no-repeat;
+				}
+
+			}
+		}
+	}
+	&__info{
+		background-color: $--white;
+		@media screen and (min-width:1024px){
+			width:50%;
+		}
+		&__img{
+			max-height: 66%;
+			height: 100%;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 78px;
+				height: 75px;
+				background: url('../images/around.svg') center center / cover no-repeat;
+			}
+			& img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+
+			}
+		}
+		&__content{
+			padding: 60px 30px;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			align-items: center;
+			font-family: "Roboto Condensed";
+			span{
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 900;
+				line-height: normal;
+				text-transform: uppercase;
+				@media screen and  (min-width:768px) {
+					font-size: 25px;
+				}
+			}
+			.time{
+				display: flex;
+				gap: 21px;
+				align-items: center;
+				div{
+					font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: normal;
+				text-transform: uppercase;
+					color: rgba(16, 17, 18, 0.5);
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+				span{
+					font-size: 32px;
+					font-style: normal;
+					font-weight: 900;
+					line-height: normal;
+					text-transform: uppercase;
+					color: $--black;
+				}
+			}
+		}
+	}
+}
