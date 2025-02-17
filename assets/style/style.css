@@ -1942,7 +1942,7 @@ form fieldset input[type=radio]:checked:after {
   flex-direction: column;
   color: #101112;
   background-color: #FFE887;
-  padding: 10px 0;
+  padding: 10px;
 }
 @media screen and (min-width: 768px) {
   .footer__copy {
