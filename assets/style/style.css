@@ -964,12 +964,13 @@ form fieldset input[type=radio]:checked:after {
   background-image: url(../images/bg-img.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 70px 0;
   overflow: hidden;
 }
-@supports (background-attachment: fixed) {
+@supports (-webkit-touch-callout: none) {
   .tournament {
-    background-attachment: fixed;
+    background-attachment: local;
   }
 }
 @media screen and (min-width: 768px) {
