@@ -3,7 +3,7 @@
 	background-image: url(../images/bg-img.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	// background-attachment: fixed;
+	background-attachment: fixed;
 	@supports (-webkit-touch-callout: none) {
 		background-attachment: local;
 	}
