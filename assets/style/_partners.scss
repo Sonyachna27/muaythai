@@ -30,8 +30,11 @@
 		}
 		img{
 			width: 100%;
-			max-width: 203px;
+			max-width: 100%;
 			object-fit: cover;
+			@media screen and (min-width:767px) {
+				max-width: 203px;
+			}
 		}
 	}
 	&__promo{

@@ -2016,9 +2016,14 @@ form fieldset input[type=radio]:checked:after {
 }
 .partners__item img {
   width: 100%;
-  max-width: 203px;
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (min-width: 767px) {
+  .partners__item img {
+    max-width: 203px;
+  }
 }
 .partners__promo {
   display: flex;
