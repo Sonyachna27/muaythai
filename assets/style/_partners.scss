@@ -50,9 +50,7 @@
 		}
 		&__content{
 			background-color: $--primary;
-			border-top: 2px solid $--black;
-			border-right: 2px solid $--black;
-			border-left: 2px solid $--black;
+			border: 2px solid $--black;
 			color: $--black;
 			padding: 30px 20px;
 			display: flex;

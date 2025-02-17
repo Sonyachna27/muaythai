@@ -2032,9 +2032,7 @@ form fieldset input[type=radio]:checked:after {
 }
 .partners__promo__content {
   background-color: #FACB00;
-  border-top: 2px solid #101112;
-  border-right: 2px solid #101112;
-  border-left: 2px solid #101112;
+  border: 2px solid #101112;
   color: #101112;
   padding: 30px 20px;
   display: flex;
