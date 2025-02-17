@@ -2006,13 +2006,9 @@ form fieldset input[type=radio]:checked:after {
 }
 .partners__item img {
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
   max-width: 203px;
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 100%;
-  height: fit-content;
 }
 .partners__promo {
   display: flex;
