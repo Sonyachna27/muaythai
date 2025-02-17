@@ -5,15 +5,18 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	padding: 70px 0;
+	overflow: hidden;
 	@media screen and (min-width:768px) {
 		padding: 140px 0;
 	}
 	&__container{
 		display: flex;
 		flex-direction: column;
+		&:not(:nth-last-of-type(1)){
+			margin-bottom: 40px;
+		}
 		@media screen and (min-width:1024px) {
 			flex-direction: row;
-
 		}
 		
 	}

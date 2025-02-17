@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	accordionFunction();
 	prettyScroll();
 	animationHeader();
-	
-updateCountdown(tournamentDate);
+	initCountdowns();
+
 });
 
 setTimeout(function () {
@@ -85,7 +85,8 @@ const toggleMenu = () =>{
     });
   });
 }
-function updateCountdown(targetDate) {
+
+function updateCountdown(targetDate, countdownElement, infoContentElement) {
 	function calculateTime() {
 			let now = new Date().getTime();
 			let difference = targetDate - now;
@@ -94,19 +95,35 @@ function updateCountdown(targetDate) {
 					let days = Math.floor(difference / (1000 * 60 * 60 * 24));
 					let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 					let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-					document.getElementById("days").textContent = days.toString().padStart(2, '0');
-					document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
-					document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
-			} 
+
+					countdownElement.querySelector(".days").textContent = days.toString().padStart(2, '0');
+					countdownElement.querySelector(".hours").textContent = hours.toString().padStart(2, '0');
+					countdownElement.querySelector(".minutes").textContent = minutes.toString().padStart(2, '0');
+			} else {
+					// При завершенні турніру змінюємо текст у .tournament__info__content
+					infoContentElement.innerHTML = "<span>Турнір завершився</span>";
+					countdownElement.style.display = "none"; // Приховуємо таймер
+			}
 	}
+
 	calculateTime();
-	setInterval(calculateTime, 60000); 
-	
+	setInterval(calculateTime, 60000);
 }
-let tournamentDate = new Date(document.querySelector(".date").textContent.trim()).getTime();
 
+function initCountdowns() {
+	let tournaments = document.querySelectorAll(".tournament__container");
 
+	tournaments.forEach((tournament) => {
+			let dateString = tournament.querySelector(".date").textContent.trim();
+			let countdownElement = tournament.querySelector(".time");
+			let infoContentElement = tournament.querySelector(".tournament__info__content");
+			let targetDate = new Date(dateString).getTime();
 
+			if (!isNaN(targetDate)) {
+					updateCountdown(targetDate, countdownElement, infoContentElement);
+			}
+	});
+}
 
 const addAnimationInit = () => {
 

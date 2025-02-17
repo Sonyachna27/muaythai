@@ -4,6 +4,7 @@
 		flex-direction: column;
 		gap: 20px;
 		margin-bottom: 40px;
+		overflow: hidden;
 		@media screen and (min-width:768px) {
 			flex-direction: row;
 		}
@@ -28,8 +29,9 @@
 			padding: 40px;
 		}
 		img{
-			width: fit-content;
+			width: 100%;
 			height: fit-content;
+			max-width: 203px;
 			object-fit: cover;
 			max-height: 100%;
 			height: fit-content;

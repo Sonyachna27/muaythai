@@ -30,6 +30,7 @@
 	&__bottom{
 		display: flex;
 		flex-direction: column;
+		overflow-x: hidden;
 		@media screen and (min-width:1024px) {
 			flex-direction: row;
 		}
