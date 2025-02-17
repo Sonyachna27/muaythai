@@ -964,9 +964,13 @@ form fieldset input[type=radio]:checked:after {
   background-image: url(../images/bg-img.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   padding: 70px 0;
   overflow: hidden;
+}
+@supports (background-attachment: fixed) {
+  .tournament {
+    background-attachment: fixed;
+  }
 }
 @media screen and (min-width: 768px) {
   .tournament {
@@ -1628,6 +1632,11 @@ form fieldset input[type=radio]:checked:after {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 70px 0;
+}
+@supports (background-attachment: fixed) {
+  .faq {
+    background-attachment: fixed;
+  }
 }
 @media screen and (min-width: 768px) {
   .faq {
