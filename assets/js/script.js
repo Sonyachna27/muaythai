@@ -19,7 +19,6 @@ setTimeout(function () {
 	});
 }, 100);
 
-
 const prettyScroll = () => {
 	document.querySelectorAll('a[href^="#"]').forEach(link => {
 			link.addEventListener('click', function(e) {

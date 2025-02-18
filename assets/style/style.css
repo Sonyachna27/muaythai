@@ -1414,6 +1414,7 @@ form fieldset input[type=radio]:checked:after {
   gap: 10px;
   width: 100%;
   margin-top: auto;
+  transition: 0.3s linear;
   border-right: 2px solid #101112;
   border-bottom: 2px solid #101112;
   border-left: 2px solid #101112;
@@ -1438,6 +1439,10 @@ form fieldset input[type=radio]:checked:after {
   width: 16px;
   height: 12px;
   background: url("../images/arrow-about.svg") center center/cover no-repeat;
+  transition: 0.3s linear;
+}
+.about__content__link:hover:after {
+  transform: translateX(10px);
 }
 
 .gallery__wrap {

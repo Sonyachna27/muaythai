@@ -99,6 +99,7 @@
 			gap: 10px;
 			width: 100%;
 			margin-top: auto;
+			transition: .3s linear;
 			@media screen and (min-width:768px) {
 				padding: 40px 30px;
 				font-size: 20px;
@@ -120,7 +121,12 @@
 				width: 16px;
 				height: 12px;
 				background: url('../images/arrow-about.svg') center center / cover no-repeat;
-
+				transition: .3s linear;
+			}
+			&:hover{
+				&:after{
+					transform: translateX(10px);
+				}
 			}
 		}
 	}
