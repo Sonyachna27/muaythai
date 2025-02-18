@@ -100,9 +100,9 @@ function updateCountdown(targetDate, countdownElement, infoContentElement) {
 					countdownElement.querySelector(".hours").textContent = hours.toString().padStart(2, '0');
 					countdownElement.querySelector(".minutes").textContent = minutes.toString().padStart(2, '0');
 			} else {
-					// При завершенні турніру змінюємо текст у .tournament__info__content
-					infoContentElement.innerHTML = "<span>Турнір завершився</span>";
-					countdownElement.style.display = "none"; // Приховуємо таймер
+					
+					infoContentElement.innerHTML = "<span>The tournament is over</span>";
+					countdownElement.style.display = "none"; 
 			}
 	}
 

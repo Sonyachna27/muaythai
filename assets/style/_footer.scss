@@ -79,6 +79,10 @@
 					li{
 						display: flex;
 						flex-direction: column;
+						transition: .3s linear;
+						&:hover{
+							color: $--white;
+						}
 					}
 				}
 			}
@@ -132,8 +136,12 @@
 		letter-spacing: 0.2px;
 		text-transform: uppercase;
 		align-items: center;
+		transition: .3s linear;
 		@media screen and (min-width:768px) {
 			font-size: 20px;
+		}
+		&:hover{
+			color: $--primary;
 		}
 		span{
 			border-right: 1px solid rgba(214, 214, 214, 0.10);
@@ -150,14 +158,16 @@
 	}
 }
 	&__copy{
+		&__wrap{
+			background-color: #FFE887;
+		}
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 20px;
 		flex-direction: column;
 		color: $--black;
-		background-color: #FFE887;
-		padding: 10px;
+		
 		@media  screen and (min-width:768px) {
 			flex-direction: row;
 		}

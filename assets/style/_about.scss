@@ -19,12 +19,12 @@
 		blockquote{
 			display: flex;
 			gap: 24px;
+			flex-direction: column;
 			&:before{
 				content: url('../images/blockquote-before.svg');
+				height: fit-content;
 			}
-			&:after{
-				content: url('../images/blockquote-after.svg');
-			}
+			
 		}
 	}
 	&__bottom{

@@ -1316,12 +1316,12 @@ form fieldset input[type=radio]:checked:after {
 .about__top blockquote {
   display: flex;
   gap: 24px;
+  flex-direction: column;
 }
 .about__top blockquote:before {
   content: url("../images/blockquote-before.svg");
-}
-.about__top blockquote:after {
-  content: url("../images/blockquote-after.svg");
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .about__bottom {
   display: flex;
@@ -1865,6 +1865,10 @@ form fieldset input[type=radio]:checked:after {
 .footer__wrap nav ul li {
   display: flex;
   flex-direction: column;
+  transition: 0.3s linear;
+}
+.footer__wrap nav ul li:hover {
+  color: #fff;
 }
 .footer__block {
   display: flex;
@@ -1916,11 +1920,15 @@ form fieldset input[type=radio]:checked:after {
   letter-spacing: 0.2px;
   text-transform: uppercase;
   align-items: center;
+  transition: 0.3s linear;
 }
 @media screen and (min-width: 768px) {
   .footer__socials a {
     font-size: 20px;
   }
+}
+.footer__socials a:hover {
+  color: #FACB00;
 }
 .footer__socials a span {
   border-right: 1px solid rgba(214, 214, 214, 0.1);
@@ -1941,8 +1949,9 @@ form fieldset input[type=radio]:checked:after {
   gap: 20px;
   flex-direction: column;
   color: #101112;
+}
+.footer__copy__wrap {
   background-color: #FFE887;
-  padding: 10px;
 }
 @media screen and (min-width: 768px) {
   .footer__copy {
