@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	prettyScroll();
 	animationHeader();
 	initCountdowns();
-
+	addAnimationInit();
 });
 
 setTimeout(function () {
